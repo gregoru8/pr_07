@@ -1,5 +1,3 @@
-
-
 CREATE DATABASE medical_db
 
 CREATE TABLE Hospital (
@@ -25,6 +23,12 @@ CREATE TABLE Doctor (
     Experience SMALLINT
 );
 
+CREATE TABLE patient (
+       patient_Id serial NOT NULL PRIMARY KEY,
+       AGE INT NOT NULL,
+       NAME VARCHAR (100) NOT NULL
+   );
+
 INSERT INTO Doctor (Doctor_Id, Doctor_Name, Hospital_Id, Joining_Date, Speciality, Salary, Experience)
 VALUES
 ('101', 'David', '1', '2005-02-10', 'Pediatric', 40000, NULL),
@@ -45,9 +49,3 @@ VALUES
 ('116', 'Liam', '4', '2022-05-25', 'Dermatologist', 35000, 4),
 ('117', 'Mia', '1', '2024-06-17', 'Gastroenterologist', 53000, 2),
 ('118', 'Lucas', '2', '2023-01-12', 'Anesthesiologist', 46000, 3);
-
- CREATE TABLE patient (
-        patient_Id serial NOT NULL PRIMARY KEY,
-        AGE INT NOT NULL,
-        NAME VARCHAR (100) NOT NULL
-    );
